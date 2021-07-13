@@ -19,6 +19,15 @@
 		10192656269B7E660026E03B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10192627269B7E640026E03B /* Persistence.swift */; };
 		10192657269B7E660026E03B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10192628269B7E660026E03B /* Assets.xcassets */; };
 		10192658269B7E660026E03B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10192628269B7E660026E03B /* Assets.xcassets */; };
+		101926B0269CA1D50026E03B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101926AF269CA1D50026E03B /* Task.swift */; };
+		101926B1269CA1D50026E03B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101926AF269CA1D50026E03B /* Task.swift */; };
+		101926B2269CA1D50026E03B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101926AF269CA1D50026E03B /* Task.swift */; };
+		101926B3269CA1D50026E03B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101926AF269CA1D50026E03B /* Task.swift */; };
+		101926C6269CA2350026E03B /* CDTask+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101926C4269CA2350026E03B /* CDTask+CoreDataClass.swift */; };
+		101926C7269CA2350026E03B /* CDTask+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101926C4269CA2350026E03B /* CDTask+CoreDataClass.swift */; };
+		101926CA269CA2350026E03B /* CDTask+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101926C5269CA2350026E03B /* CDTask+CoreDataProperties.swift */; };
+		101926CB269CA2350026E03B /* CDTask+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101926C5269CA2350026E03B /* CDTask+CoreDataProperties.swift */; };
+		10C94998269D295C00A72AFF /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C94997269D295C00A72AFF /* CoreDataHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +64,10 @@
 		10192648269B7E660026E03B /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1019264C269B7E660026E03B /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		1019264E269B7E660026E03B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		101926AF269CA1D50026E03B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		101926C4269CA2350026E03B /* CDTask+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDTask+CoreDataClass.swift"; sourceTree = "<group>"; };
+		101926C5269CA2350026E03B /* CDTask+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDTask+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		10C94997269D295C00A72AFF /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +117,10 @@
 		10192622269B7E640026E03B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				10192625269B7E640026E03B /* ToDoListApp.swift */,
+				101926AD269C9E4E0026E03B /* Config */,
+				101926AE269CA1A70026E03B /* Modal */,
+				101926A8269C9E340026E03B /* Database */,
 				10192626269B7E640026E03B /* ContentView.swift */,
-				10192627269B7E640026E03B /* Persistence.swift */,
 				10192628269B7E660026E03B /* Assets.xcassets */,
 				10192623269B7E640026E03B /* ToDoList.xcdatamodeld */,
 			);
@@ -157,6 +171,41 @@
 				1019264E269B7E660026E03B /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		101926A8269C9E340026E03B /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				10C94996269D280B00A72AFF /* DatabaseRepository */,
+				101926C4269CA2350026E03B /* CDTask+CoreDataClass.swift */,
+				101926C5269CA2350026E03B /* CDTask+CoreDataProperties.swift */,
+				10192627269B7E640026E03B /* Persistence.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		101926AD269C9E4E0026E03B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				10192625269B7E640026E03B /* ToDoListApp.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		101926AE269CA1A70026E03B /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				101926AF269CA1D50026E03B /* Task.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		10C94996269D280B00A72AFF /* DatabaseRepository */ = {
+			isa = PBXGroup;
+			children = (
+				10C94997269D295C00A72AFF /* CoreDataHelper.swift */,
+			);
+			path = DatabaseRepository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,8 +366,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1019264F269B7E660026E03B /* ToDoList.xcdatamodeld in Sources */,
+				101926CA269CA2350026E03B /* CDTask+CoreDataProperties.swift in Sources */,
+				10C94998269D295C00A72AFF /* CoreDataHelper.swift in Sources */,
+				101926C6269CA2350026E03B /* CDTask+CoreDataClass.swift in Sources */,
 				10192655269B7E660026E03B /* Persistence.swift in Sources */,
 				10192651269B7E660026E03B /* ToDoListApp.swift in Sources */,
+				101926B0269CA1D50026E03B /* Task.swift in Sources */,
 				10192653269B7E660026E03B /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,8 +381,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				10192650269B7E660026E03B /* ToDoList.xcdatamodeld in Sources */,
+				101926CB269CA2350026E03B /* CDTask+CoreDataProperties.swift in Sources */,
+				101926C7269CA2350026E03B /* CDTask+CoreDataClass.swift in Sources */,
 				10192656269B7E660026E03B /* Persistence.swift in Sources */,
 				10192652269B7E660026E03B /* ToDoListApp.swift in Sources */,
+				101926B1269CA1D50026E03B /* Task.swift in Sources */,
 				10192654269B7E660026E03B /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				101926B2269CA1D50026E03B /* Task.swift in Sources */,
 				10192642269B7E660026E03B /* Tests_iOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				101926B3269CA1D50026E03B /* Task.swift in Sources */,
 				1019264D269B7E660026E03B /* Tests_macOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
